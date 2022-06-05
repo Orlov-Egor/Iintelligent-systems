@@ -1,4 +1,7 @@
 import random
+import numpy
+
+#ЦЕЛОЧИСЛЕННОЕ КОДИРОВАНИЕ
 
 # фитнесс функция, необходимая для оценки приспособленности особей
 def fit(idividual):
@@ -72,13 +75,13 @@ def population_crossover(population):
             new_pop.append(population[i+1])
     return new_pop
 
-#создаем популяцию (из рандомных значений x)
+#создаем целочисленную популяцию (из рандомных значений x)
 initial_population = []
 for i in range(10):
     a = random.randint(0, 100)
     initial_population.append(a)
-print("Начальная популяция: ", initial_population)
-print("")
+print("Целочисленная начальная популяция: ", initial_population)
+print("123")
 
 #вычисляем приспособленность начальной популяции
 population_fitness = []
@@ -94,7 +97,7 @@ for i in range(len(initial_population)):
             else:
                     print('Целевая функция "x^2 + 4" особи #', i, ' равна: ', initial_population[i]**2+4 ,sep='')
 
-        quit()
+        break
     population_fitness.append(fitness)
     print('Приспособленность особи #', i, ' равна: ', fitness, sep='')
 print("")
@@ -130,7 +133,7 @@ for j in range(3000):
                     print('Целевая функция "x^2 + 4" особи #', i, ' равна: ', result_population[i]**2+4 , ' - это минимум функции', sep='')
                 else:
                     print('Целевая функция "x^2 + 4" особи #', i, ' равна: ', result_population[i]**2+4 ,sep='')
-            quit()
+            break
         population_fitness.append(fitness)
 
 
@@ -161,7 +164,6 @@ for j in range(3000):
                 print('Целевая функция "x^2 + 4" особи #', i, ' равна: ', new_population[i]**2+4 , ' - это минимум функции', sep='')
             else:
                 print('Целевая функция "x^2 + 4" особи #', i, ' равна: ', new_population[i]**2+4 ,sep='')
-        quit()
+        break
 
-
-
+print("1")
